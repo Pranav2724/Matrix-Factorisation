@@ -77,14 +77,14 @@ def update_usermovie2rating_test(row):
 df_test.apply(update_usermovie2rating_test, axis=1)
 
 # note: these are not really JSONs
-with open('user2movie.json', 'wb') as f:
+with open('large_files/user2movie.json', 'wb') as f:
     pickle.dump(user2movie, f)
 
-with open('movie2user.json', 'wb') as f:
+with open('large_files/movie2user.json', 'wb') as f:
     pickle.dump(movie2user, f)
 
-with open('usermovie2rating.json', 'wb') as f:
+with open('large_files/usermovie2rating.json', 'wb') as f:
     pickle.dump(usermovie2rating, f)
 
-with open('usermovie2rating_test.json', 'wb') as f:
+with open('large_files/usermovie2rating_test.json', 'wb') as f:
     pickle.dump(usermovie2rating_test, f)

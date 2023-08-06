@@ -14,23 +14,23 @@ from datetime import datetime
 
 # load in the data
 import os
-if not os.path.exists('user2movie.json') or \
-   not os.path.exists('movie2user.json') or \
-   not os.path.exists('usermovie2rating.json') or \
-   not os.path.exists('usermovie2rating_test.json'):
+if not os.path.exists('large_files/user2movie.json') or \
+   not os.path.exists('large_files/movie2user.json') or \
+   not os.path.exists('large_files/usermovie2rating.json') or \
+   not os.path.exists('large_files/usermovie2rating_test.json'):
    import preprocess2dict
 
 
-with open('user2movie.json', 'rb') as f:
+with open('large_files/user2movie.json', 'rb') as f:
   user2movie = pickle.load(f)
 
-with open('movie2user.json', 'rb') as f:
+with open('large_files/movie2user.json', 'rb') as f:
   movie2user = pickle.load(f)
 
-with open('usermovie2rating.json', 'rb') as f:
+with open('large_files/usermovie2rating.json', 'rb') as f:
   usermovie2rating = pickle.load(f)
 
-with open('usermovie2rating_test.json', 'rb') as f:
+with open('large_files/usermovie2rating_test.json', 'rb') as f:
   usermovie2rating_test = pickle.load(f)
 
 N = np.max(list(user2movie.keys())) + 1
