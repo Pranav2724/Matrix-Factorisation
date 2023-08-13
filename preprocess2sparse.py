@@ -44,7 +44,7 @@ df_train.apply(update_train, axis=1)
 # mask, to tell us which entries exist and which do not
 A = A.tocsr()
 mask = (A > 0)
-save_npz("Atrain.npz", A)
+save_npz("large_files/Atrain.npz", A)
 
 # test ratings dictionary
 A_test = lil_matrix((N, M))
@@ -66,4 +66,4 @@ def update_test(row):
 df_test.apply(update_test, axis=1)
 A_test = A_test.tocsr()
 mask_test = (A_test > 0)
-save_npz("Atest.npz", A_test)
+save_npz("large_files/Atest.npz", A_test)

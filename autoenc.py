@@ -23,8 +23,8 @@ epochs = 20
 reg = 0.0001
 # reg = 0
 
-A = load_npz("Atrain.npz")
-A_test = load_npz("Atest.npz")
+A = load_npz("large_files/Atrain.npz")
+A_test = load_npz("large_files/Atest.npz")
 mask = (A > 0) * 1.0  # Because all ratings are between 0.5 and 5
 mask_test = (A_test > 0) * 1.0
 
